@@ -16,3 +16,5 @@ Best site to know the pearl of Asian ocean.
 ![sigiriya](https://user-images.githubusercontent.com/107571625/174284081-13632dfa-a502-461b-b768-a778884e2761.jpg)
 ![sigiriya](https://user-images.githubusercontent.com/107571625/174284107-8c274e03-9be5-4170-981b-ab520e44566e.jpg)
 ![yala](https://user-images.githubusercontent.com/107571625/174284123-552fc7eb-6aae-4fbb-907f-f8c59268ab48.jpg)
+![yala](https://user-images.githubusercontent.com/107571625/174284123-552fc7eb-6aae-4fbb-907f-f8c59268ab48.jpg)
+![galle](https://user-images.githubusercontent.com/107571625/174284277-24910a2d-b639-4d7d-9d65-e088ad8be2d2.png)
