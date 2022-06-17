@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/icon" href="images/logo/srilogo.jpg"/>
+    <link rel="stylesheet" href="styles.css">
+    <title>Activities</title>
+</head>
+<style>
+    body{
+        background-image: linear-gradient(to right, #c9c9c9 , rgb(255, 255, 255));
+    }
+    h1{
+        font-family: Georgia, serif;
+    }
+    #todobody{
+        margin-top: 150px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    #app{
+        border: 2px solid black;
+        width: 700px;
+        height: 400px;
+        margin: auto;
+        text-align: center;
+        background-color: red;
+        filter: drop-shadow(0 0 0.75rem rgb(48, 48, 48));
+    }
+    #list{
+        width: 400px;
+        height: 250px;
+        margin: auto;
+        margin-top: 10px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: x-large;
+        text-align: left;
+        overflow: auto;
+    }
+    #addbutton{
+        background-color: silver;
+        padding: 5px 10px 5px 10px;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+    #addbutton:hover{
+        cursor: pointer;
+        filter: drop-shadow(0 0 0.75rem rgb(48, 48, 48));
+    }
+    #editbutton{
+        background-color: yellow;
+        padding: 5px 10px 5px 10px;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+    #editbutton:hover{
+        cursor: pointer;
+        filter: drop-shadow(0 0 0.75rem rgb(48, 48, 48));
+    }
+    #delbutton{
+        background-color: rgb(255, 110, 110);
+        padding: 5px 10px 5px 10px;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+    #delbutton:hover{
+        cursor: pointer;
+        filter: drop-shadow(0 0 0.75rem rgb(48, 48, 48));
+    }
+    #input{
+        width: 250px;
+        height: 25px;
+        border-radius: 10px;
+        padding-left: 10px;
+    }
+   
+</style>
+<body>
+    <div class="navbar">                                                             <!--navbar-->
+        <a href="hotel contact page.html">Contact us</a>
+        <a href="hotel contact page.html">About us</a>
+        <a href="home page.html">Home</a>
+    </div>
+    <div id="todobody">
+        <div id="app">
+            <div class="container">
+                <h1>Activities</h1>
+
+             <div v-if="!update">
+                 <input id="input" placeholder="Add tasks to your list..." type="text" v-model="todo">
+                 <input id="addbutton" type="submit" value="Add" @click="addItem">
+             </div>
+             <div v-else>
+                 <input id="input"  type="text" v-model="todo">
+                 <input id="addbutton" type="submit" value="Update" @click="updateItem">
+             </div>
+
+            <ol id="list">
+               <li v-for="(todo, index) in todos">
+                    {{ Activity }}
+                  <button id="editbutton" @click="editItem(index, todo)">Edit</button>
+                  <button id="delbutton" @click="deleteItem(index)">Delete</button>
+              </li>
+            </ol>
+            </div>
+
+        </div>
+    </div>
+    <br><br><br><br>
+    <div class="footer" >              <!--footer-->
+        
+        <div style="margin: 10px; margin-left: 38%;" id="center">             <!--Quick links-->
+              <p style="font-size: x-large;">Quick links</p>
+              <a class="quicklinks" href="home page.html" target="_blank">Home</a><br>
+              <a class="quicklinks" href="hotel contact page.html">About Us</a><br>
+              <a class="quicklinks" href="site map.html">Site Map</a><br>
+              <a class="quicklinks" href="activities page.html" target="_blank">Activities</a><br>
+              <a class="quicklinks" href="beaches page.html">Beaches</a><br>
+              <a class="quicklinks" href="heritage location page.html">Heritage locations</a><br>
+              <a class="quicklinks" href="types of wildlife attractions page.html">Wildlife attractions</a><br>
+              
+        </div>
+       </div>
+       <div id="iconsall" style="background-color: red;"><br><hr>        
+            <p style="font-size:small;">Refference</p>
+            <p>Author: Emma Boyle<br>                               <!--Refference-->
+                <a href="https://www.lonelyplanet.com/articles/best-beaches-sri-lanka">https://www.lonelyplanet.com/articles/best-beaches-sri-lanka</a></p>
+             <p>Author: Becky Grainger<br>
+                 <a href="https://www.experiencetravelgroup.com/blog/best-wildlife-experiences-in-sri-lanka/">https://www.experiencetravelgroup.com/blog/best-wildlife-experiences-in-sri-lanka/</a></p>
+              <br>
+            <p style="color: white; opacity: 0.9;">©2022 Created by Husni Haniffa</p>
+       </div>
+        
+     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <script src="veu.js"></script>
+    
+</body>
+</html>

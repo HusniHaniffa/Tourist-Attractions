@@ -1,0 +1,205 @@
+body{
+    background-image: linear-gradient(to right, #c9c9c9 , rgb(255, 255, 255));
+    z-index: -1;
+}
+#touristInfoBody{
+    margin-top: 50px;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: Georgia, serif; 
+}
+#background{
+    background-image: url('images/main/swimming.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    overflow: auto;
+    z-index: 1;
+}
+#leftpart{
+    float: left;
+    overflow: auto;
+    margin-left: 5%;
+    margin-right: 9%;
+    margin-top: 13%;
+}
+#midpart{                     /*province image*/
+    float: left;
+    overflow: auto;
+}
+#rightpart{
+    float: right;
+    overflow: auto;
+    margin-right: 5%;
+    margin-top: 15%;
+}
+#List {
+   list-style-type: none;
+   padding: 5px;
+   margin: 10px;
+}
+
+#List li a {
+   border: 1px solid rgb(0, 0, 0);
+   padding: 20px;
+   text-decoration: none;
+   font-size: 18px;
+   color: black;
+   display: block;
+   margin: 10px;
+   filter: drop-shadow(0 0 0.75rem rgb(48, 48, 48));
+   font-weight: bold;
+}
+
+#List li a:hover{
+   background-color: rgb(136, 136, 136);
+}
+  
+#map{
+    filter: drop-shadow(0 0 0.85rem rgb(0, 0, 0));
+    padding: 25px;
+}
+#districts{
+    margin: 10px;
+    overflow: auto;
+}
+.districtlist{
+    border: 1px solid black;
+    width: 180px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    float: left;
+    margin:10px;
+    filter: drop-shadow(0 0 0.75rem rgb(48, 48, 48));
+}
+.dList{
+    list-style-type: none;
+    padding: 5px;
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#cont{
+    font-size: large;
+    background-color: red;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;   
+}
+
+#ISPs{
+    border: 1px solid black;
+    overflow: auto;
+    text-align: center;
+    margin: 10px;
+    padding-left: 20px ;
+    padding-right: 20px ;
+    padding-bottom: 15px;
+}
+.ISPlist{
+    border: 1px solid gray;
+    float: left;
+    width: 160px;
+    margin-left: 5px;
+    filter: drop-shadow(0 0 0.75rem rgb(48, 48, 48));
+}
+
+#rightsideofISP{
+    float: right;
+    overflow: auto;
+    margin-top:2%;
+    margin-left: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 20px;
+    text-align: center;
+    border: 2px solid rgb(176, 176, 180);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/*searbar to fixed position*/                                 /*search bar*/
+#search_t {           
+    position: -webkit-sticky; /* Safari & IE */
+    position: sticky;
+    top: 30px;
+    z-index: 3;
+    margin-left: 70px;
+  }
+  /*searchbar*/
+  #searchForm_t{
+    margin-left: 250px;
+    transform: translate(-50%,-50%);
+    transition: all 1.2s;
+    width: 400px;
+    height: 50px;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 4px solid white;
+    padding: 5px;
+    z-index: 10;
+}
+
+#searchInput_t{
+    position: absolute;
+    top: 0;
+    margin-left: 35px;
+    width: 85%;;
+    height: 42.5px;
+    line-height: 30px;
+    outline: 0;
+    border: 0;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 0 20px;
+}
+
+.fa{
+    box-sizing: border-box;
+    padding: 10px;
+    width: 42.5px;
+    height: 42.5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    color: #0055c4;
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 1.5s;
+}
+#searchForm_t:hover{                    /*after hover search*/
+    cursor: pointer;
+}
+
+#searchForm_t:hover #searchInput_t{
+    display: block;
+}
+
+#searchForm_t:hover .fa{
+    background: rgb(24, 159, 238);
+    color: white;
+}
+
+#myUL {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 50px;
+  }
+  
+  #myUL li a {
+    border: 1px solid #ddd;
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    display: block
+  }
+  
+  #myUL li a:hover:not(.header) {
+    background-color: rgb(255, 255, 255);
+  }

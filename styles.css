@@ -1,0 +1,334 @@
+html,body                      /*Fix extra width space in right */
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {                                                 /*background image*/
+  position: absolute;
+  background-image: url('images/main/2022-06-13-14-03-19-968.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+/* The navigation bar */
+.navbar {
+    overflow: hidden;
+    position: fixed; 
+    top: 0; 
+    width: 100%;
+    height: 60px;
+    background-color: red;
+    z-index: 2;
+  }
+
+  /* Links inside the navbar */
+.navbar a {
+    float: right;
+    margin-right: 25px;
+    display: block;
+    color: silver;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration:double;
+    font-size: 20px;
+    font-weight: 700;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 5px 5px 10px #000000;
+    transition: 0.5s;
+  }
+  
+  /* Change background on hover */
+  .navbar a:hover {
+    color:#ffffff;
+  }
+
+  /*Heading format*/
+  #mainheading {
+    font-size:140px;
+    font-family: "Sofia", sans-serif;
+    margin-top: 60px;
+    margin-left: 50px;
+	  color: grey;
+    text-shadow: 5px 5px 8px #000000;
+	  font-weight: 600;
+  }
+
+  /*searbar to fixed position*/
+  #search {           
+    position: -webkit-sticky; /* Safari & IE */
+    position: sticky;
+    top: 30px;
+    z-index: 3;
+  }
+  /*searchbar*/
+  #searchForm{
+    margin-left: 250px;
+    transform: translate(-50%,-50%);
+    transition: all 1.2s;
+    width: 50px;
+    height: 50px;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 4px solid white;
+    padding: 5px;
+    z-index: 10;
+}
+
+#searchInput{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;;
+    height: 42.5px;
+    line-height: 30px;
+    outline: 0;
+    border: 0;
+    display: none;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 0 20px;
+}
+
+.fa{
+    box-sizing: border-box;
+    padding: 10px;
+    width: 42.5px;
+    height: 42.5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    color: #0055c4;
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 1.5s;
+}
+#searchForm:hover{                    /*after hover search*/
+    width: 400px;
+    cursor: pointer;
+}
+
+#searchForm:hover #searchInput{
+    display: block;
+}
+
+#searchForm:hover .fa{
+    background: rgb(24, 159, 238);
+    color: white;
+}
+
+.welcome {                    /*welcome image*/
+  margin-top: 95px;
+}
+
+.welcomeTextBox {
+  background-color: #ffffff;
+  z-index: -1;
+  position: relative;
+  text-align: center;
+}
+
+#welcomeText {                            /*animating the text*/
+  text-align: center;
+  font-size: 70px;
+  font-weight: 400;
+  font-family: "Sofia", sans-serif;
+  display: inline-block;
+  color: black;
+  animation: fadeIn linear 7s;
+  -webkit-animation: fadeIn linear 7s;
+  -moz-animation: fadeIn linear 7s;
+  -o-animation: fadeIn linear 7s;
+  -ms-animation: fadeIn linear 7s;
+}
+
+@keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+#fullgallery{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+div.gallery {                                         /*gallery*/
+  margin: 5px;
+  border: 2px solid rgb(34, 112, 255);
+  float: left;
+  width: 360px;
+  background-color: red;
+  transition: transform .2s;
+  z-index: -1;
+}
+
+div.gallery:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
+}
+
+div.gallery:hover .overlay {
+  opacity: 1;
+}
+
+div.gallery img {
+  width: 100%;
+  height: 300px;
+  z-index: -1;
+}
+
+div.desc {           /*gallery image description*/
+  padding: 15px;
+  text-align: center;
+}
+
+.overlay {                          /*overlay*/
+  position: absolute; 
+  bottom: 19%; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 89%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+div.intro{                                /*intro  description after welcometext */                               /*intro-para*/
+  background: silver;
+  z-index: -1;
+  position: relative;
+  width: "1500";
+  border: 3px solid red;
+  font-size: x-large;
+  text-align: center;
+  font-family: Georgia, serif; 
+  padding: 10px 15px 10px 15px;
+}
+
+div.footer {                               /* footer */
+  background-color: red;
+  z-index: -1;
+  float: left;
+  width: 100%;
+  height: auto;
+}
+
+#contactus {                     /*contact us details - leftpart*/
+  color: #ffffff;
+  margin-left: 2%;
+  width: auto;
+  float: left;
+  font-size: large;
+}
+#contactushead{
+  font-size: xx-large;
+}
+#contactemail{                   /*contact forum*/
+  width: 460px;
+  height: 35px;
+  padding-left: 10px;
+  margin-right: 71px;
+}
+#question{
+  width: 460px;
+  height: 100px;
+  padding-left: 10px;
+  text-align:left;
+}
+#submit{
+  width: 75px;
+  height: 30px;
+}
+
+#center{                 /*quick links - center part*/
+  color: white;
+  text-align: center;
+  float: left; 
+  margin-top: 7%;
+  height: auto;
+  width: 250px;
+  padding-bottom: 40px;
+  opacity: 0.9;
+  
+}
+.quicklinks{
+  color: white;
+  line-height: 30px;
+  transition: 0.4s;
+  opacity: 0.75;
+}
+.quicklinks:link {
+  text-decoration: none;
+}
+.quicklinks:visited {
+  text-decoration: none;
+}
+.quicklinks:hover {
+  opacity: 1;
+}
+.quicklinks:active {
+  opacity: 1;
+}
+
+#right{                   /* test right div*/
+  float: right;
+  margin-right: 25px;
+  margin-top: 8%;
+  filter: drop-shadow(0 0 0.75rem rgb(48, 48, 48));
+  transition: 0.4s;
+}
+#right:hover{
+  filter: drop-shadow(0 0 0.75rem rgb(255, 255, 255));
+}
+
+#iconsall{                /*iconpack social media*/
+  float: left; 
+  width: 100%; 
+  text-align: center;
+  margin-bottom: 10px;
+}
+#icons{
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 7px;
+  transition: 0.5s;
+  margin-top: 15px;
+  opacity: 0.8;
+}
+#icons:hover {
+  opacity: 1;
+}
